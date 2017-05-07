@@ -1,0 +1,175 @@
+.calendar-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.calendar-content {
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    
+}
+
+.month {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+    
+}
+
+.month-change-left, .month-change-right {
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+.month-change-left > div {
+    background: url("/assets/icons/arrow-left.png") no-repeat center;
+    background-size: 30% 55%;    
+    width: 100%;
+    height: 100%;
+}
+
+.month-change-left > div:hover {
+    background: url("/assets/icons/arrow-left-hover.png") no-repeat center;
+    background-size: 30% 55%;    
+    width: 100%;
+    height: 100%;
+    
+}
+
+.month-change-right > div {
+    background: url("/assets/icons/arrow-right.png") no-repeat center;
+    background-size: 30% 55%;    
+    width: 100%;
+    height: 100%;
+}
+
+.month-change-right > div:hover {
+    background: url("/assets/icons/arrow-right-hover.png") no-repeat center;
+    background-size: 30% 55%;    
+    width: 100%;
+    height: 100%;
+}
+
+.month-value {
+    width: 60%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    
+    font-size: 80px;
+    color: #546E7A;
+  
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+}
+
+.weeks {
+    margin-left: 5%;
+    width: 90%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 88, 255, 0.9) 0%,rgba(0, 129, 255, 0.9));
+    border-bottom: 3px solid rgba(0, 88, 255, 0.9);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.week {
+    color: black;
+    width: 14.2857%;
+    padding-top: 25px;
+    height: 75px;
+    float: left;
+}
+
+.days {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;  
+    border-top: 0;
+}
+
+.dupa:first-child {
+    display: none;
+}
+
+/* Day Css */
+
+.day {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    padding-top: 30px;
+    width: 14.2857%;
+    height: 100px;
+    float: left;
+    box-shadow:inset 0px 0px 0px 2px rgba(0, 129, 255, 0.9);
+}
+
+.after {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.after:hover {
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+.today {
+    background-color:rgba(170, 94, 255, 0.8);
+}
+
+.today:hover {
+    background-color:rgba(170, 94, 255, 0);
+}
+
+.before {
+
+}
+
+.before:hover {
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+.day-event-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.day-event {
+    width: 40%;
+    height: 75%;
+    background-color: red;
+    position: fixed;
+    border: 2px solid grey;
+    top: 15%;
+    left: 30%;
+    z-index: 999;
+}
+
+.day-event-title {
+    width: 100%;
+    height: 15%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: yellow;
+}
+
+.day-margin {
+    width: 100%;
+    height: 200px;
+    color:black;
+}

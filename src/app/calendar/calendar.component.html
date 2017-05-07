@@ -1,0 +1,55 @@
+<div class="calendar-area">
+    <div class="calendar-content">
+        <div class="month">
+            <div class="month-change-left">
+                <div (click)="minusMon()">
+                </div>
+            </div>
+            <div class="month-value"> 
+                {{ calendarYear }} 
+                {{ calendarMonthNames[calendarMonth] }}
+                
+            </div>
+            <div class="month-change-right">
+                <div (click)="plusMon()">
+                </div>
+            </div>
+            <div class="clear-both">
+            </div>
+        </div>
+
+        <div class="weeks">
+            <div class="week">Poniedziałek</div>
+            <div class="week">Wtorek</div>
+            <div class="week">Środa</div>
+            <div class="week">Czwartek</div>
+            <div class="week">Piątek</div>
+            <div class="week">Sobota</div>
+            <div class="week">Niedziela</div>
+            <div class="clear-both"></div>
+        </div>
+
+        <div class="days">
+            <empty-day *ngFor="let skipDay of calendarWeekDaySkip" class="dupa">    
+            </empty-day>
+            <div class="day" (click)="onSelectDayEvent()" *ngFor="let day of calendarDayForToday" [class.after]="day < calendarToday && calendarBeforeToday == 1 || calendarYear < calendarYearForToday || calendarMonth < calendarMonthForToday && calendarYear == calendarYearForToday " [class.today]="day == calendarToday && calendarAfterToday == 1" [class.before]="day > calendarToday && calendarBeforeToday == 1 || calendarYear > calendarYearForToday || calendarMonth > calendarMonthForToday && calendarYear == calendarYearForToday ">
+                <div >
+                {{ day }}
+                </div>
+            </div>
+            <empty-day *ngFor="let emptyDay of calendarEmptyDayArray" class="dupa">    
+            </empty-day>
+            <div class="clear-both"></div>
+        </div>
+
+        
+
+        <div class="day-event-bg" *ngIf="selectedDay === true" (click)="onSelectDayEvent()">
+        </div>
+
+        <div class="day-event" *ngIf="selectedDay === true">
+            <div class="day-event-title">
+            </div>   
+        </div>
+    </div>
+</div>

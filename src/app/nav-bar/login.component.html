@@ -1,0 +1,19 @@
+<div *ngIf="selectedLogin === true">
+<div class="login">
+    <div class="login-inputs">
+        <label>Username:</label><br>
+        <input type="text" value=""><br>
+        <label>Password:</label><br>
+        <input type="text" value=""><br>
+        <a (click)="onSelectLogin()" routerLink="/calendar">
+            <div class="send-login" >
+            Login
+            </div>
+        </a>
+        
+    </div>
+</div>
+</div>
+<div class="back" (click)="onSelectLogin()" *ngIf="selectedLogin === true">
+    <img src='assets/icons/back3.png' alt="Back"/>
+</div>

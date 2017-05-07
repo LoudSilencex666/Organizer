@@ -1,0 +1,26 @@
+<div class="menu">
+    <div class="logo" routerLink="/home">
+        LOGO
+    </div>
+    <div class="option" (click)="onSelectRegister()">
+        REGISTER
+    </div>
+    <div class="option" (click)="onSelectLogin()">
+        LOGIN
+    </div>
+    <div class="option">
+         TOP POST
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+<login *ngIf="selectedLogin === true">
+</login>
+
+
+<register *ngIf="selectedRegister === true"> 
+</register>
+<div class="back" (click)="onSelectRegister()" *ngIf="selectedRegister === true">
+    <img src='assets/icons/back3.png' alt="back"/>
+</div>
